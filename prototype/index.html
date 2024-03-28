@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Tables</title>
+    <link rel="stylesheet" href="index_style.css">
+</head>
+<body>
+    <header></header>
+    <div class="icons">
+        <a href="#" class="profile-icon"><img src="profile.png" alt="Profile"></a>
+        <a href="#" class="cart-icon"><img src="cart.png" alt="Cart"></a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="customer.html">Customer Support</a></li>
+        </ul>
+    </nav>
+    </header>
+    <h1>Welcome to Customizable Table Website</h1>
+    <div class="table-gallery">
+        <div class="table" onclick="redirectToTableDetails('table1')">
+            <img src="bedroom.jpeg" alt="Table 1">
+            <h3>Bedroom Table</h3>
+        </div>
+        <div class="table" onclick="redirectToTableDetails('table2')">
+            <img src="t1.jpeg" alt="Table 2">
+            <h3>Living Room Table</h3>
+        </div>
+        <div class="table" onclick="redirectToTableDetails('table3')">
+            <img src="kitchen.jpeg" alt="Table 3">
+            <h3>Dining Table</h3>
+        </div>
+        <div class="table" onclick="redirectToTableDetails('table4')">
+            <img src="living_room.jpeg" alt="Table 4">
+            <h3>Living Room Table</h3>
+        </div>
+        <div id="redirect-section">
+            <p>Click here to provide your information:</p>
+            <a href="userInfo.html">User Information</a>
+        </div>
+        <!-- Add more tables as needed -->
+    </div>
+
+    <script>
+        function redirectToTableDetails(tableName) {
+            window.location.href = "table_details.html?table=" + tableName;
+        }
+    </script>
+</body>
+</html>

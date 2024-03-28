@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div id="login-container">
+        <h2>Login to Customize Your Table</h2>
+        <form action="submit.html" method="post">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br><br>
+            
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" required><br><br>
+            
+            <label for="profession">Profession:</label><br>
+            <input type="text" id="profession" name="profession" required><br><br>
+            
+            <label for="people_count">Number of People Using the Table:</label><br>
+            <input type="number" id="people_count" name="people_count" required><br><br>
+            
+            <label for="purpose">Purpose of Using the Table:</label><br>
+            <input type="text" id="purpose" name="purpose" required><br><br>
+            
+            <label for="budget">Budget and Cost Requirement:</label><br>
+            <input type="text" id="budget" name="budget" required><br><br>
+            
+            <label for="placement">Placement of the Table:</label><br>
+            <input type="text" id="placement" name="placement" required><br><br>
+            
+            <label for="dimensions">Dimensions and Size Requirements:</label><br>
+            <input type="text" id="dimensions" name="dimensions" required><br><br>
+            
+            <label for="max_load">Maximum Load on the Table:</label><br>
+            <input type="text" id="max_load" name="max_load" required><br><br>
+            
+            <label for="material">Material Requirement for the Table:</label><br>
+            <input type="text" id="material" name="material" required><br><br>
+            
+            <label for="tech_requirements">Tech Requirements:</label><br>
+            <select id="tech_requirements" name="tech_requirements">
+                <option value="charging_socket">Charging Socket</option>
+                <option value="lamp">Lamp</option>
+                <option value="speaker">Speaker</option>
+                <option value="wireless_charging">Wireless Charging</option>
+                <option value="table_lighting">Table Lighting</option>
+            </select><br><br>
+            
+            <label for="other_requirements">Any Other Requirements:</label><br>
+            <textarea id="other_requirements" name="other_requirements" rows="4" cols="50"></textarea><br><br>
+            
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    </div>
+    <script>
+        const divElement = document.querySelector('submit'); // Replace 'div' with the ID or class of your actual div element
+
+divElement.addEventListener('click', function() {
+  window.location.href = 'https://www.google.com'; // Replace 'https://www.example.com' with the URL of your desired page
+});
+    </script>
+</body>
+</html>

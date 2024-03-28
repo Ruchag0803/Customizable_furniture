@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+#table-info {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#table-info img,
+#table-info video {
+    display: block;
+    margin: 0 auto 20px; /* Center the image or video */
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+#table-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-gallery img {
+    max-width: 200px; /* Adjust image width */
+    height: auto;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* For videos, ensure they are large and responsive */
+.image-gallery video {
+    max-width: 400px; /* Adjust video width */
+    height: auto;
+    margin: 10px;
+    border-radius: 5px;
+}

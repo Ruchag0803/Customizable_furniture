@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Details</title>
+    <link rel="stylesheet" href="table_style.css">
+</head>
+<body>
+    <div id="table-info">
+        <!-- Table information will be dynamically added here -->
+    </div>
+
+    <script>
+        // Parse the table name from the query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const tableName = urlParams.get('table');
+
+        // Simulated table information (replace with actual data)
+        const tableData = {
+            table1: {
+                images: ["bedroom.jpeg"],
+                video: "",
+                info: "This is Table 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            table2: {
+                images: ["t1.jpeg", "t1-1.jpeg"],
+                video: "",
+                info: "This is Table 2. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            },
+            table3: {
+                images: ["kitchen.jpeg"],
+                video: "",
+                info: "This is Table 3. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            },
+            table4: {
+                images: ["living_room.jpeg"],
+                video: "white_table_living.mp4",
+                info: "This is Table 4. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            }
+            // Add more tables as needed
+        };
+
+        // Display table information
+        const tableInfoDiv = document.getElementById('table-info');
+        const tableImages = tableData[tableName].images;
+        const tableVideo = tableData[tableName].video;
+        const tableInfo = tableData[tableName].info;
+
+        // Create image gallery
+        const galleryContainer = document.createElement('div');
+        galleryContainer.classList.add('image-gallery');
+
+        tableImages.forEach(image => {
+            const imgElement = document.createElement('img');
+            imgElement.src = image;
+            galleryContainer.appendChild(imgElement);
+        });
+
+        // Create video element if video is provided
+        if (tableVideo !== "") {
+            const videoElement = document.createElement('video');
+            videoElement.src = tableVideo;
+            videoElement.controls = true; // Show video controls (play, pause, etc.)
+            galleryContainer.appendChild(videoElement);
+        }
+
+        tableInfoDiv.appendChild(galleryContainer);
+
+        // Display table information
+        const infoElement = document.createElement('p');
+        infoElement.textContent = tableInfo;
+        tableInfoDiv.appendChild(infoElement);
+    </script>
+</body>
+</html>
